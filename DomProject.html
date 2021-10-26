@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bulb on off Project</title>
+</head>
+
+<body>
+    <h1>Bulb Control</h1>
+    <button onclick="turnOn()">ON</button>
+    <button onclick="turnOff()">OFF</button>
+    <button id="onofbutton" onclick="taggle()">ON</button>
+    <div>
+        <img id="bublStatus" src="offLight.jpg" alt="">
+        
+    </div>
+</body>
+
+<script>
+    const turnOn = () => {
+        let imgOb = document.getElementById("bublStatus");
+        imgOb.setAttribute("src", "onLight.jpg")
+
+    };
+
+    const turnOff = () => {
+        let imgOb1 = document.getElementById("bublStatus")
+        //    console.log(imgOb1)
+        //    imgOb1.setAttribute("src")
+        //    let value=imgOb1.getAttribute("src");
+        //    console.log(value)
+
+        imgOb1.setAttribute('src',"offLight.jpg")
+    };
+
+    const taggle=()=>{
+    let imgob2=document.getElementById("bublStatus")
+    let value=imgob2.getAttribute("src")
+
+    let onOffValue=document.getElementById("onofbutton")
+     let ineervalue=onOffValue.innerHTML;
+
+     if(value=="offLight.jpg"){
+        turnOn(); 
+        onOffValue.innerHTML="ON"
+        
+     }else{
+        turnOff();
+        onOffValue.innerHTML="OFF"
+     }
+
+    };
+
+</script>
+
+</html>
